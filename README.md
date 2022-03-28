@@ -10,6 +10,9 @@ This POC demonstrates how to list down users and service accounts from specified
 - `./gradlew bootRun` from root project. 
 - it will print basic total cost for each month used. 
 
+## References
+- https://cloud.google.com/iam/docs/write-policy-client-libraries
+
 
 # Support?
 you can reach out to the git repo owner or email me at ortizmark905@gmail.com, you can also look for me from linked in and upwork.
