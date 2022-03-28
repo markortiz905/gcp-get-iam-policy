@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UserDirectoryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="user_directory.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.mark.poc.UserDirectoryApplication" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+    <envs>
+      <env name="GOOGLE_APPLICATION_CREDENTIALS" value="$PROJECT_DIR$/../psyched-elixir-345100-ed99a84ddb0e.json" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.mark.poc'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	set('springCloudGcpVersion', "3.1.0")
+	set('springCloudVersion', "1.2.5.RELEASE")
+}
+
+dependencies {
+	//a must to auto configure credentials and IoC
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation "org.springframework.cloud:spring-cloud-gcp-starter-bigquery:${springCloudVersion}"
+
+	//iam_java_dependency
+	implementation 'com.google.apis:google-api-services-cloudresourcemanager:v3-rev20211107-1.32.1'
+	implementation 'com.google.http-client:google-http-client-jackson2:1.41.4'
+	implementation 'com.google.apis:google-api-services-iam:v1-rev20220310-1.32.1'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "com.google.cloud:spring-cloud-gcp-dependencies:${springCloudGcpVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
