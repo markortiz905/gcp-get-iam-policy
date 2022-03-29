@@ -18,20 +18,18 @@ import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.List;
 
-
 /**
  * this poc lets you query all users/service accounts from projects specified
  *
  * the service account must have access to bq with the following roles
  * - roles/owner (note - this can be an exaggerating role, use with care.)
  *
- *
  * @author Mark Ortiz
  */
 @SpringBootApplication
-public class UserDirectoryApplication {
+public class GcpUserDirectoryApplication {
 
-	private static Logger logger = LoggerFactory.getLogger(UserDirectoryApplication.class);
+	private static Logger logger = LoggerFactory.getLogger(GcpUserDirectoryApplication.class);
 
 	public static void main(String[] args) {
 		// TODO: Replace with your project ID.
